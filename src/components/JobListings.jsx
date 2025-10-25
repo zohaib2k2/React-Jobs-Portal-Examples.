@@ -3,9 +3,8 @@ import jobs from '../jobs.json';
 import JobListing from './jobListing';
 
 const JobListings = () => {
-    console.log(jobs); 
-    console.log(jobs[0].title);
-
+  
+  const recentJobs = jobs.slice(0,3);
   return (
     <section className="bg-blue-50 px-4 py-10">
       <div className="container-xl lg:container m-auto">
@@ -14,7 +13,7 @@ const JobListings = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* <!-- job listing 1 --> */}
-          { jobs.map( (job) => (
+          { recentJobs.map( (job) => (
             <JobListing key={job.id} job={job}/>
           ))
           }
