@@ -30,8 +30,8 @@ This app demonstrates how to structure, style, and manage data in a React applic
 ## 📂 Project Setup
 
 ### 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/react-job-portal-demo.git
+```sh
+git clone https://github.com/zohaib2k2/React-Jobs-Portal-Examples..git
 cd react-job-portal-demo
 
 npm install
