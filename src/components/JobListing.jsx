@@ -14,7 +14,7 @@ export const JobListing = ( { job} ) => {
 
   return (
     <>
-         <div className="bg-white rounded-xl shadow-md relative">
+         <div className="bg-white rounded-xl shadow-md relative hover:shadow-2xl hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300 ease-in-out">
               <div className="p-4">
                 <div className="mb-6">
                   <div className="text-gray-600 my-2">{job.type}</div>

@@ -24,16 +24,16 @@ const Navbar = () => {
               <div className="flex space-x-2">
                 <NavLink
                   to="/"
-                  className={({isActive}) => isActive ? "bg-black text-white rounded-md px-3 py-2" : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"}
+                  className={({isActive}) => isActive ? "bg-black text-white hover:bg-gray-900 rounded-md px-3 py-2" : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"}
                   >Home</NavLink
                 >
                 <NavLink
                   to="/jobs"
-                  className={({isActive}) => isActive ? "bg-black text-white rounded-md px-3 py-2" : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"}
+                  className={({isActive}) => isActive ? "bg-black text-white hover:bg-gray-900 rounded-md px-3 py-2" : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"}
                   >Jobs</NavLink>
                 <NavLink
                   to="/add-job"
-                  className={({isActive}) => isActive ? "bg-black text-white rounded-md px-3 py-2" : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"}
+                  className={({isActive}) => isActive ? "bg-black text-white hover:bg-gray-900s rounded-md px-3 py-2" : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"}
                   // className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                   >Add Job</NavLink
                 >
