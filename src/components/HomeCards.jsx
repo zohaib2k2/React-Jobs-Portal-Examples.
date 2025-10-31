@@ -7,7 +7,7 @@ const HomeCards = () => {
         
         <div className="container-xl lg:container m-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
-            <Card className="hover:shadow-2xl hover:shadow-blue-500 hover:-translate-y-2 transition-all duration-300 ease-in-out">
+            <Card bg="bg-gray-200">
                 <h2 className="text-2xl font-bold">for developers</h2>
                 <p className="mt-2 mb-4">
                 browse our react jobs and start your career today
