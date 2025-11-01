@@ -11,6 +11,7 @@ const Loader = ({loading}) => {
   return (
     <SyncLoader
       color={"#3a85f6"}
+      size={20}
       loading={loading}
       cssOverride={override}/>
   )
