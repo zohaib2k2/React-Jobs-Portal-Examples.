@@ -1,10 +1,36 @@
 
-import jobs from '../jobs.json';
+//import jobs from '../jobs.json';
 import JobListing from './JobListing';
+import { useState, useEffect } from 'react';
 
 const JobListings = (props) => {
 
-//  props.defaultNum = 3;
+  const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const res = await fetch('http://127.0.0.1:8000/jobs');
+        const data = await res.json();
+        setJobs(data);
+        //setLoading(false);
+      } catch (error) {
+        console.error(`Error occured while fetching data for jobs ${error}`);
+      } finally {
+        // make it sleep for 3 seconds to simulate loading
+        // + await new Promise(resolve => setTimeout(resolve, 3000));
+        // ^ this is just for demonstration purpose.
+        setLoading(false);
+      }
+      
+      
+
+    } 
+    fetchJobs()
+
+  }, [])
+  //  props.defaultNum = 3;
   /**
    * props.defaultNum || jobs.length <-- if props.defaultNum is provided, use it; otherwise, use the total number of jobs
    * now this seems to arbitrary but it's a common pattern in JavaScript to provide default values
@@ -21,11 +47,16 @@ const JobListings = (props) => {
           browse jobs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* <!-- job listing 1 --> */}
-          { recentJobs.map( (job) => (
-            <JobListing key={job.id} job={job}/>
-          ))
+          {/* <!-- job listing  --> */}
+          { loading ? (<h2>Loading please wait...</h2>):
+            <>
+            { recentJobs.map( (job) => (
+             <JobListing key={job.id} job={job}/>
+             ))
+            }
+            </>
           }
+        
           
         
         </div>
