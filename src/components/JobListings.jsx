@@ -20,7 +20,7 @@ const JobListings = (props) => {
         console.error(`Error occured while fetching data for jobs ${error}`);
       } finally {
         // make it sleep for 3 seconds to simulate loading
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        // await new Promise(resolve => setTimeout(resolve, 3000));
         // ^ this is just for demonstration purpose.
         setLoading(false);
       }
