@@ -12,7 +12,7 @@ const JobListings = (props) => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch('http://127.0.0.1:8000/jobs');
+        const res = await fetch('/api/jobs');
         const data = await res.json();
         setJobs(data);
         //setLoading(false);
